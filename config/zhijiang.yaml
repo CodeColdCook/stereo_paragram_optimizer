@@ -1,0 +1,100 @@
+%YAML:1.0
+
+
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# img_path
+IMG_PATH_L: ./data/image_0/frame0040.jpg
+IMG_PATH_R: ./data/image_1/frame0040.jpg
+
+min_th_parallax: 0.01
+min_th_n_Triangulates: 25
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 363.521634 
+Camera.fy: 363.964555
+Camera.cx: 320.812941
+Camera.cy: 238.310163
+
+Camera.k1: 0.066295
+Camera.k2: -0.048028
+Camera.p1: -0.002303
+Camera.p2: -0.000420
+
+# Camera calibration and distortion parameters (OpenCV)  camr
+Camera.fx_r: 360.833487
+Camera.fy_r: 361.311662
+Camera.cx_r: 334.388312
+Camera.cy_r: 242.571617
+
+Camera.k1_r: 0.069053
+Camera.k2_r: -0.054059
+Camera.p1_r: -0.001346
+Camera.p2_r: -0.001661
+
+# Camera frames per second 
+Camera.fps: 20.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#---------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+
+body_T_cam0: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [0.01223976, 0.07822245, 0.99686079, 0.01804841,
+                    -0.99990993, -0.00453267, 0.01263287, 0.09978829,
+                     0.00550662, -0.99692563, 0.07815993, -0.0295002,
+                      0, 0, 0, 1]
+body_T_cam1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [0.00970226, 0.09572566, 0.99536047, 0.02159202,
+                   -0.9999439, 0.00515836, 0.00925085, -0.09655228,
+                   -0.00424888, -0.99539439, 0.09577033, -0.029753,
+                   0, 0, 0, 1 ]
+cam1_T_cam0: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [0.9999492014082103, 0.009527171760505599, -0.003292449259067591, -0.1963650124054749,
+          -0.009467490885750931, 0.9997986917340715, 0.01769035811172228, 0.0004219444503541171,
+          0.003460328974816199, -0.01765830094786225, 0.9998380918149856, -0.001686641730640903,
+          0, 0, 0, 1]

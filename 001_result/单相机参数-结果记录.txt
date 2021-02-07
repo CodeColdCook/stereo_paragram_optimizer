@@ -1,0 +1,107 @@
+
+zhijiang数据（双目图像数据，双目相机参数）————————————————————————t未赋值标定数据
+#define CONFIG_PATH "./config/zhijiang.yaml"
+#define IMG_PATH_R "./data/frame0040_R.jpg"
+#define IMG_PATH_L "./data/frame0040_L.jpg"
+=====================================================================================================================
+——————优化前pose
+R21[0.99994677, 0.0091375718, -0.0047874707;
+ -0.0090865307, 0.99990278, 0.010577601;
+ 0.0048836237, -0.010533574, 0.99993259]
+t21[-0.95536608;
+ 0.017537147;
+ 0.29490364]
+
+——————优化后pose
+
+
+——————BA优化细节
+
+——————Triangulate细节（包含parallax）
+SH: 289.928
+SF: 641.087
+good matches: 56
+min good Triangulate number: 25
+parallax1: 0.0197823         nGood1: 56
+parallax2: 0         nGood2: 0
+parallax3: 0         nGood3: 32
+parallax4: 0         nGood4: 0
+max good Triangulate number: 56
+ReconstructF is ok 
+nmatches before Triangulated: 61
+nmatches after Triangulated: 24
+
+
+
+zhijiang数据（双目图像数据，双目相机参数）————————————————————————t赋值标定数据
+#define CONFIG_PATH "./config/zhijiang.yaml"
+#define IMG_PATH_R "./data/frame0040_R.jpg"
+#define IMG_PATH_L "./data/frame0040_L.jpg"
+=====================================================================================================================
+
+——————优化前pose
+R21[0.99994677, 0.009135752, -0.0047890213;
+ -0.0090846997, 0.99990261, 0.010577746;
+ 0.0048851739, -0.010533666, 0.99993259]
+t21[-0.196365;
+ 0.00042190001;
+ -0.001686]
+
+——————优化后pose
+T21 after BA: [0.99995005, 0.0087959152, -0.0047494778, -0.19627762;
+                -0.0087504247, 0.99991643, 0.0095153786, -0.00092906068;
+                0.0048327777, -0.0094733434, 0.99994344, -0.0042496733;
+                0, 0, 0, 1]
+
+——————BA优化细节
+iteration= 0     chi2= 0.009674  time= 0.00379011        cumTime= 0.00379011     edges= 24       schur= 1        lambda= 16.626756       levenbergIter= 1
+iteration= 1     chi2= 0.000033  time= 0.00115759        cumTime= 0.0049477      edges= 24       schur= 1        lambda= 7.723432        levenbergIter= 1
+iteration= 2     chi2= 0.000000  time= 0.00119601        cumTime= 0.00614371     edges= 24       schur= 1        lambda= 5.148955        levenbergIter= 1
+iteration= 3     chi2= 0.000000  time= 0.00113273        cumTime= 0.00727644     edges= 24       schur= 1        lambda= 3.432636        levenbergIter= 1
+iteration= 4     chi2= 0.000000  time= 0.00113781        cumTime= 0.00841425     edges= 24       schur= 1        lambda= 2.288424        levenbergIter= 1
+iteration= 5     chi2= 0.000000  time= 0.00123557        cumTime= 0.00964982     edges= 24       schur= 1        lambda= 1.525616        levenbergIter= 1
+iteration= 6     chi2= 0.000000  time= 0.00112325        cumTime= 0.0107731      edges= 24       schur= 1        lambda= 1.017077        levenbergIter= 1
+iteration= 7     chi2= 0.000000  time= 0.00106826        cumTime= 0.0118413      edges= 24       schur= 1        lambda= 0.678052        levenbergIter= 1
+iteration= 8     chi2= 0.000000  time= 0.00137226        cumTime= 0.0132136      edges= 24       schur= 1        lambda= 0.452034        levenbergIter= 1
+iteration= 9     chi2= 0.000000  time= 0.00103001        cumTime= 0.0142436      edges= 24       schur= 1        lambda= 0.301356        levenbergIter= 1
+iteration= 10    chi2= 0.000000  time= 0.00103161        cumTime= 0.0152752      edges= 24       schur= 1        lambda= 0.200904        levenbergIter= 1
+iteration= 11    chi2= 0.000000  time= 0.0010468         cumTime= 0.016322       edges= 24       schur= 1        lambda= 0.133936        levenbergIter= 1
+iteration= 12    chi2= 0.000000  time= 0.0062824         cumTime= 0.0226044      edges= 24       schur= 1        lambda= 2925.879259     levenbergIter= 6
+iteration= 13    chi2= 0.000000  time= 0.00112631        cumTime= 0.0237307      edges= 24       schur= 1        lambda= 1950.586173     levenbergIter= 1
+iteration= 14    chi2= 0.000000  time= 0.00329728        cumTime= 0.027028       edges= 24       schur= 1        lambda= 124837.515067   levenbergIter= 3
+optimization costs time: 0.0289984 seconds.
+
+——————Triangulate细节（包含parallax）
+SH: 289.925
+SF: 641.095
+good matches: 56
+min good Triangulate number: 25
+parallax1: 0         nGood1: 0
+parallax2: 0.034264         nGood2: 56
+parallax3: 0         nGood3: 0
+parallax4: 0         nGood4: 32
+max good Triangulate number: 56
+ReconstructF is ok 
+nmatches before Triangulated: 61
+nmatches after Triangulated: 24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
